@@ -6,8 +6,8 @@ University of Sussex Library
 t.c.graves@sussex.ac.uk
 
 # Before starting, you will need:
-- Canvas access (what sort do I have) so that you can access all courses.
-- An access token for the Canvas API.
+- Canvas access (what sort do I have??) so that you can access all courses.
+- An access token for your Canvas API.
 - An Ex Libris API key that allows you read/write access to Courses.
 - To find out which course'accounts' you have in Canvas and decide which you want to include.
 - To work out how you will identify the courses you want to include. You will need a common search term that can be found in them.
