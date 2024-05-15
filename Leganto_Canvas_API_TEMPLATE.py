@@ -23,7 +23,7 @@ default_start = "2024-08-31"
 default_stop = "2025-08-31"
 
 # Leganto api key
-leganto_api_key = "EX_LIBRIS_APIS_KEY_THAT_GIVES_WRITE_PERMISSION_TO_COURSES"
+leganto_api_key = "EX_LIBRIS_API_KEY"
 
 # Canvas access code.
 headers = {"Authorization": "Bearer <YOUR_CANVAS_ACCESS_TOKEN_HERE>"}
@@ -95,7 +95,7 @@ def updateLegantoCourse(
 def get_teacher_pid(canvas_id):
     # Function to get the PID for a teacher based on their Canvas 'id'
 
-    call_user_url = f"https://canvas.sussex.ac.uk:443/api/v1/users/{canvas_id}"
+    call_user_url = f"https://canvas.YOUR_INSTITUTION.ac.uk:443/api/v1/users/{canvas_id}"
 
     teacher_response = requests.get(call_user_url, headers=headers)
 
@@ -109,7 +109,7 @@ def call_canvas_account(this_year, each_account):
     # Function that calls Canvas for all courses
     # in a given account, and updates Leganto
 
-    api_url = f"https://canvas.sussex.ac.uk:443/api/v1/accounts/{each_account}/courses?search_term={this_year}&include[]=total_students&include[]=teachers&search_by=course"
+    api_url = f"https://canvas.YOUR_INSTITUTION.ac.uk:443/api/v1/accounts/{each_account}/courses?search_term={this_year}&include[]=total_students&include[]=teachers&search_by=course"
 
     # Set up the parameters
     params = {
